@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "admin": true,
+    "manager": null,
+    "name": "Александр",
+    "password": "1234",
+    "email": "user1@mail.com",
+    "token": "4rt6e37ey82uw29i9iy5y50or3"
+  },
+  {
+    "id": 2,
+    "admin": true,
+    "manager": true,
+    "name": "Сергей",
+    "password": "1234",
+    "email": "user2@mail.com",
+    "token": "3ru9u9ut5t9tu39tu4t3t843t4"
+  },
+  {
+    "id": 3,
+    "admin": null,
+    "manager": null,
+    "name": "Николай",
+    "password": "1234",
+    "email": "user3@mail.com",
+    "token": "7y7ty83y34ty34t34u7483827y"
+  },
+  {
+    "id": 4,
+    "admin": null,
+    "manager": null,
+    "name": "Константин",
+    "password": "1234",
+    "email": "user4@mail.com",
+    "token": "3r2983u2r8yr8y743ry7ry38yr"
+  },
+  {
+    "id": 5,
+    "admin": null,
+    "manager": null,
+    "name": "Евгений",
+    "password": "1234",
+    "email": "user5@mail.com",
+    "token": "988yt78y38ty34tuy4t384yt3"
+  },
+  {
+    "id": 6,
+    "admin": null,
+    "manager": null,
+    "name": "Анатолий",
+    "password": "1234",
+    "email": "user6@mail.com",
+    "token": "3984yt3478yt837yttuy48ty"
+  }
+]

@@ -1,0 +1,151 @@
+.navbar
+  display flex
+  align-items center
+  padding 0 2rem
+  min-height 5rem
+  box-shadow 0 2px 0 0 background-color
+
+.navbar-menu
+  display flex
+
+.navbar-link
+  color secondary
+
+.navbar-link:hover
+  color primary
+
+.navbar-item
+  display block
+  position relative
+  padding .5rem 0
+
+.navbar-item:hover
+  color primary
+
+.navbar-icon
+  width 40px
+  height 40px
+  background-color border
+  border-radius 50%
+  display inline-block
+  vertical-align middle
+  text-align center
+  line-height 40px
+  color #fff
+
+.dropdown
+  position absolute
+  display none
+  z-index 10
+  min-width 100%
+  right 0
+  top 100%
+  background-color #fff
+  box-shadow 0 0 5px 3px background-color
+  border-radius 3px
+
+.dropdown .navbar-item
+  padding .5rem 1rem
+  white-space nowrap
+
+.navbar-item.is-hoverable:hover
+  cursor pointer
+
+.navbar-item.is-hoverable:hover .dropdown
+  display block
+
+.navbar > .container
+  display flex
+  justify-content space-between
+  align-items center
+
+.logo
+  color link
+  font-weight 500
+  font-size 2rem
+
+.title
+  color: primary
+  font-size 2rem
+  font-weight 600
+  line-height 1.2
+
+.card
+  border 1px solid border
+  border-radius 5px
+  padding: 1rem
+  &-wrapper
+    position relative
+    height 10rem
+    overflow hidden
+  &-img
+    position absolute
+    left 50%
+    top 50%
+    width 100%
+    min-height 100%
+    transform translate(-50%, -50%)
+
+.box
+  border 1px solid border
+  border-radius 7px
+
+.button
+  padding 0 1rem
+  text-align center
+  background-color info
+  border none
+  border-radius 3px
+  color #fff
+  font-size 1.1rem
+  cursor pointer
+  transition all .1s
+  height 2.5rem
+  line-height 2.5rem
+  align-self: center
+  display inline-block
+
+.is-light
+  background-color transparent
+  color secondary
+  border 1px solid border
+
+.is-danger
+  background-color danger
+
+.is-small
+  height 2rem
+  line-height 2rem
+
+.input
+.select
+  border 1px solid border
+  border-radius 3px
+  outline none
+  padding 0 1rem
+  height 2.5rem
+  line-height 2.5rem
+  max-width 100%
+  width 100%
+
+.error
+  background-color danger-light
+  padding .3rem 1rem
+  border 1px solid danger
+  border-radius 3px
+  font-size .9rem
+
+.table thead
+  height 2.5rem
+  line-height 2.5rem
+  border-bottom 2px solid border
+
+.table tbody tr
+  height 2.2rem
+  line-height 2.2rem
+  border-bottom 1px solid border
+
+.table thead th
+  border-bottom 1px solid border
+  color primary
+  text-align left
