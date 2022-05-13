@@ -14,6 +14,17 @@ app.get('/', async (req, res) => {
   }
 });
 
+app.get('/:id', async (req, res) => {
+  try {
+    const users = (await require('axios').get('http://127.0.0.1:3000/users.json')).data;
+    const user = users.find(item => item.id == req.params.id);
+
+    res.json({user});
+  } catch (e) {
+    res.status(500).json({ message: 'Произошла ошибка, попробуте снова' });
+  }
+});
+
 app.put('/', async (req, res) => {
   try {
     // Код обновления данных пользователя в базе данных

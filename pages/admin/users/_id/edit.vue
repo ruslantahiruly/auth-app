@@ -69,6 +69,16 @@ export default {
       await this.$store.dispatch('users/fetchUsers');
     }
   },
+  async asyncData({ $axios, params }) {
+    try {
+      let response = await $axios.$get(`/users/${params.id}`);
+      let user = response.user
+
+      return { user };
+    } catch(e) {
+      return { user: [] };
+    }
+  },
   created() {
     this.editInfo.name = this.user.name;
     this.editInfo.email = this.user.email;
@@ -80,9 +90,6 @@ export default {
         return this.$store.getters['users/users'];
       },
     },
-    user() {
-      return this.users.find(item => item.id == this.$route.params.id);
-    }
   },
   methods: {
     async editUser() {

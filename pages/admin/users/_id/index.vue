@@ -26,14 +26,21 @@ export default {
       await this.$store.dispatch('users/fetchUsers');
     }
   },
+  async asyncData({ $axios, params }) {
+    try {
+      let response = await $axios.$get(`/users/${params.id}`);
+      let user = response.user
+
+      return { user };
+    } catch(e) {
+      return { user: [] };
+    }
+  },
   computed: {
     users: {
       get: function() {
         return this.$store.getters['users/users'];
       },
-    },
-    user() {
-      return this.users.find(item => item.id == this.$route.params.id);
     },
     ...mapState('auth', ['currentUser']),
   },
